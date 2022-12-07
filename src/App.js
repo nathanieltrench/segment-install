@@ -23,6 +23,9 @@ const App = () => {
   const userId = window.localStorage.currentUser;
   const currentTime = parseInt(window.localStorage.timestamp);
 
+  window.analytics.identify(userId, {
+  });
+
   window.Appcues.identify(userId, { // feel free to add in any user properties here
     role: "tester",
     signupDate: currentTime
